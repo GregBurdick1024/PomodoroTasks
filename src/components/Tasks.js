@@ -66,7 +66,10 @@ const Tasks = ({
 					/>
 				))}
 			</List>
-			<Transition in={!showForm} timeout={0} unmountOnExit>
+			<Transition
+				in={!showForm}
+				timeout={{ enter: 1000, exit: 0 }}
+				unmountOnExit>
 				{(state) => (
 					<AddTask
 						button

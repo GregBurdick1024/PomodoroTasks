@@ -18,9 +18,9 @@ const TaskForm = ({
 		padding: '30px',
 		borderRadius: '5px',
 		opacity: 1,
-		transition: 'all 0.7s ease-in',
+		transition: 'all 0.7s ease-out',
 		overflow: 'hidden',
-		maxHeight: '200px',
+		maxHeight: '300px',
 	};
 
 	const formStyleHidden = {
