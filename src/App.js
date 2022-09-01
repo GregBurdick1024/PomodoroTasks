@@ -2,8 +2,8 @@ import { useState, useRef } from 'react';
 import ButtonBar from './components/ButtonBar';
 import ClockFace from './components/ClockFace';
 import TopBar from './components/TopBar';
-// import Tasks from './components/Tasks';
-// import BottomBar from './components/BottomBar';
+import Tasks from './components/Tasks';
+import BottomBar from './components/BottomBar';
 import Footer from './components/Footer';
 import { Container } from '@mui/material';
 import { theme } from './theme';
@@ -171,7 +171,7 @@ function App() {
 					tasks={tasks}
 				/>
 				<TopBar theme={theme} timeLength={timeLength} tasks={tasks} />
-				{/* <Tasks
+				<Tasks
 					setTasks={setTasks}
 					tasks={tasks}
 					selected={selected}
@@ -190,7 +190,7 @@ function App() {
 					theme={theme}
 					timeLength={timeLength}
 					tasks={tasks}
-				/> */}
+				/>
 				<Footer />
 			</Container>
 		</div>
