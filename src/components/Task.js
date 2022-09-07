@@ -4,9 +4,11 @@ import {
 	ListItemIcon,
 	ListItemText,
 	IconButton,
+	Tooltip,
 } from '@mui/material';
-import MenuIcon from '@mui/icons-material/Menu';
+
 import TickIcon from '@mui/icons-material/CheckCircleOutline';
+import EditIcon from '@mui/icons-material/Edit';
 import { Transition } from 'react-transition-group';
 
 const Task = ({ task, index, handleEdit, handleDone, transitionStyles }) => {
@@ -62,9 +64,13 @@ const Task = ({ task, index, handleEdit, handleDone, transitionStyles }) => {
 							primary={`${task.text}`}
 						/>
 						<ListItemText>{timeLeft(task)}</ListItemText>
-						<IconButton onClick={() => handleEdit(task)} edge='end'>
-							<MenuIcon />
-						</IconButton>
+						<Tooltip>
+							<IconButton
+								onClick={() => handleEdit(task)}
+								edge='end'>
+								<EditIcon />
+							</IconButton>
+						</Tooltip>
 					</ListItem>
 				)}
 			</Transition>
